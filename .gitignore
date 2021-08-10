@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# Other
+*.cmake
+*.txt
+Makefile
+
+# Folders
+data/
+bin/
+CMakeFiles/
