@@ -2,6 +2,8 @@
 #include "mpi.h"
 
 using namespace Kadath;
+using namespace std::map;
+
 
 int main(int argc, char **argv) {
 
