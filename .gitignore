@@ -40,3 +40,4 @@ Makefile
 data/
 bin/
 CMakeFiles/
+.idea/
