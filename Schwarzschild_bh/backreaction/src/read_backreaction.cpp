@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
     }
 
     int r2_res, r3_res;
-    double r0, r1, r2, r3, t, ome, freq, mu, lambda;
+    double r0, r1, r2, r3, t, ome, freq, mu, A, lambda;
 
     char *name_fich = argv[1];
     FILE *fich = fopen(name_fich, "r");
@@ -28,6 +28,7 @@ int main(int argc, char **argv) {
     fread_be(&ome, sizeof(double), 1, fich);
     fread_be(&freq, sizeof(double), 1, fich);
     fread_be(&mu, sizeof(double), 1, fich);
+    fread_be(&A, sizeof(double), 1, fich);
     fread_be(&lambda, sizeof(double), 1, fich);
     Scalar conf(space, fich);
     Scalar lapse(space, fich);
@@ -110,6 +111,7 @@ int main(int argc, char **argv) {
     cout << "#ome " << ome << endl;
     cout << "#freq " << freq << endl;
     cout << "#mu " << mu << endl;
+    cout << "#A " << A << endl;
     cout << "#lambda " << lambda << endl;
     cout << "#adm " << adm << endl;
     cout << "#komar " << komar << endl;

@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
     double t, ome;
 
     // field values
-    double mu, freq, lambda;
+    double mu, A, freq, lambda;
 
     char *name_fich = argv[1];
     FILE *fich = fopen(name_fich, "r");
@@ -35,6 +35,7 @@ int main(int argc, char **argv) {
     fread_be(&ome, sizeof(double), 1, fich);
     fread_be(&freq, sizeof(double), 1, fich);
     fread_be(&mu, sizeof(double), 1, fich);
+    fread_be(&A, sizeof(double), 1, fich);
     fread_be(&lambda, sizeof(double), 1, fich);
 
     Scalar conf(space, fich);
@@ -55,6 +56,7 @@ int main(int argc, char **argv) {
         cout << "t  = " << t << endl;
         cout << "ome= " << ome << endl;
         cout << "mu = " << mu << endl;
+        cout << "A  = " << A << endl;
         cout << "frq= " << freq << endl;
         cout << "lmd= " << lambda << endl;
     }
@@ -255,6 +257,7 @@ int main(int argc, char **argv) {
             fwrite_be(&ome, sizeof(double), 1, fich);
             fwrite_be(&freq, sizeof(double), 1, fich);
             fwrite_be(&mu, sizeof(double), 1, fich);
+            fwrite_be(&A, sizeof(double), 1, fich);
             fwrite_be(&lambda, sizeof(double), 1, fich);
             conf.save(fich);
             lapse.save(fich);
@@ -289,6 +292,7 @@ int main(int argc, char **argv) {
         fwrite_be(&ome, sizeof(double), 1, fich);
         fwrite_be(&freq, sizeof(double), 1, fich);
         fwrite_be(&mu, sizeof(double), 1, fich);
+        fwrite_be(&A, sizeof(double), 1, fich);
         fwrite_be(&lambda, sizeof(double), 1, fich);
         conf.save(fich);
         lapse.save(fich);

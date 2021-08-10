@@ -211,6 +211,7 @@ int main(int argc, char **argv) {
         fwrite_be(&ome, sizeof(double), 1, fich);
         fwrite_be(&freq, sizeof(double), 1, fich);
         fwrite_be(&mu, sizeof(double), 1, fich);
+        fwrite_be(&A, sizeof(double), 1, fich);
         fwrite_be(&lambda, sizeof(double), 1, fich);
         conf.save(fich);
         lapse.save(fich);
