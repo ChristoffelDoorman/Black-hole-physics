@@ -1,8 +1,9 @@
 #include "kadath_spheric.hpp"
 #include "mpi.h"
+#include <map>
 
 using namespace Kadath;
-using namespace std::map;
+using std::map;
 
 
 int main(int argc, char **argv) {
