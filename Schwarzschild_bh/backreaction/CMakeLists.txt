@@ -4,7 +4,7 @@ project(br)
 include ($ENV{HOME_KADATH}/Cmake/CMakeExec.cmake)
 
 #Executable 1
-set (PROG1 backreaction)
+set (PROG1 backreaction_full)
 set (SOURCES1 src/${PROG1}.cpp)
 add_executable(${PROG1} ${SOURCES1} ${HEADERS})
 target_link_libraries(${PROG1} ${LIB_KADATH} ${PGPLOT_LIBRARIES} ${GSL_LIBRARIES} ${FFTW_LIBRARIES} ${LAPACK_LIBRARIES} ${SCALAPACK_LIBRARIES})

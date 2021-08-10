@@ -89,9 +89,6 @@ int main(int argc, char **argv) {
     Scalar p1 = field1;
     Scalar p2 = field2;
 
-    // lambda interaction term
-    double lambda = 0;
-
     field1.set_domain(1).annule_hard();
     field2.set_domain(1).annule_hard();
 
