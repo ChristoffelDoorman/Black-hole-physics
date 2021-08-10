@@ -160,7 +160,7 @@ int main(int argc, char **argv) {
     // definitions of the matter equations
     syst.add_def(
             "rho = 2 * (PI1^2 + PI2^2) + mu^2 * (ph1^2 + ph2^2) / 2 + lmd * (ph1^4 + 2 * ph1^2 * ph2^2 + ph2^4) / 8 + (D_i ph1 * D^i ph1 + D_i ph2 * D^i ph2) / (2 * Psi^4)"); // checked
-    syst.add_def("mom^i = 2 * (PI1 * D^i ph1 + PI2 * D^i ph2) / Psi^4") // checked
+    syst.add_def("mom^i = 2 * (PI1 * D^i ph1 + PI2 * D^i ph2) / Psi^4"); // checked
     syst.add_def(
             "RpS = 8 * (PI1^2 + PI2^2) - mu^2 * (ph1^2 + ph2^2) - lmd * (ph1^4 + 2 * ph1^2 * ph2^2 + ph2^4) / 4"); // checked
 
