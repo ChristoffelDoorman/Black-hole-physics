@@ -27,3 +27,9 @@ set (PROG4 backreaction_N_Psi_bet)
 set (SOURCES4 src/${PROG4}.cpp)
 add_executable(${PROG4} ${SOURCES4} ${HEADERS})
 target_link_libraries(${PROG4} ${LIB_KADATH} ${PGPLOT_LIBRARIES} ${GSL_LIBRARIES} ${FFTW_LIBRARIES} ${LAPACK_LIBRARIES} ${SCALAPACK_LIBRARIES})
+
+#Executable 4
+set (PROG5 backreaction_N_Psi_bet3)
+set (SOURCES5 src/${PROG5}.cpp)
+add_executable(${PROG5} ${SOURCES5} ${HEADERS})
+target_link_libraries(${PROG5} ${LIB_KADATH} ${PGPLOT_LIBRARIES} ${GSL_LIBRARIES} ${FFTW_LIBRARIES} ${LAPACK_LIBRARIES} ${SCALAPACK_LIBRARIES})
