@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
     fclose(fich);
 
     if (rank == 0) {
-        cout << "Backreaction for cloud 2p with N and Psi only" << endl;
+        cout << "Backreaction for cloud 2p with N, Psi and shift only (fixed fields)" << endl;
         cout << "reading success" << endl;
         cout << "r2_res= " << r2_res << endl;
         cout << "r3_res= " << r3_res << endl;
@@ -101,11 +101,11 @@ int main(int argc, char **argv) {
     // fields to solve
     syst.add_var("Psi", conf);
     syst.add_var("N", lapse);
+    syst.add_var ("bet", shift) ;
 
     // One user defined constant
     syst.add_cst ("ph1", field1) ;
     syst.add_cst ("ph2", field2) ;
-    syst.add_cst ("bet", shift) ;
     syst.add_cst("lmd", lambda);
     syst.add_cst("r", r0);
     syst.add_cst("t", t);
