@@ -265,7 +265,7 @@ int main(int argc, char **argv) {
 
             // Output interim results
             char name[100];
-            sprintf(name, "br_N_Psi_bet_A%.4f_mu%.2f_lmbd%.4f.dat", A, mu, lambda);
+            sprintf(name, "br_N_Psi_bet3_A%.4f_mu%.2f_lmbd%.4f.dat", A, mu, lambda);
             FILE *fich = fopen(name, "w");
             space.save(fich);
             fwrite_be(&r2_res, sizeof(int), 1, fich);
@@ -300,7 +300,7 @@ int main(int argc, char **argv) {
     // Output final results
     if (rank == 0) {
         char name[100];
-        sprintf(name, "br_N_Psi_bet_A%.4f_mu%.2f_lmbd%.4f.dat", A, mu, lambda);
+        sprintf(name, "br_N_Psi_bet3_A%.4f_mu%.2f_lmbd%.4f.dat", A, mu, lambda);
         FILE *fich = fopen(name, "w");
         space.save(fich);
         fwrite_be(&r2_res, sizeof(int), 1, fich);
